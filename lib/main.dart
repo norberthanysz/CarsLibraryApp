@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import './categories_screen.dart';
+import './category_cars_screen.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -18,10 +20,13 @@ class MyApp extends StatelessWidget {
               fontSize: 20,
               fontFamily: 'RobotoCondensed',
               fontWeight: FontWeight.bold,
-              color: Colors.white,
+              color: Colors.white70,
             )),
       ),
       home: CategoriesScreen(),
+      routes: {
+        '/category_cars': (context) => CategoryCarsScreen(); 
+      },
     );
   }
 }
