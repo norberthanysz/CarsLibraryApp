@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/category_cars_screen.dart';
+
 class CategoryItem extends StatelessWidget {
   final String id;
   final String name;
@@ -12,10 +14,13 @@ class CategoryItem extends StatelessWidget {
   );
 
   void selectCategory(BuildContext context) {
-    Navigator.of(context).pushNamed('/category_cars', arguments: {
-      'id': id,
-      'name': name,
-    });
+    Navigator.of(context).pushNamed(
+      CategoryCarsScreen.routeName,
+      arguments: {
+        'id': id,
+        'name': name,
+      },
+    );
   }
 
   @override

@@ -1,6 +1,8 @@
+import 'package:cars_app/models/car.dart';
 import 'package:flutter/material.dart';
 
 import './models/category.dart';
+import './models/car.dart';
 
 const DUMMY_CATEGORIES = const [
   Category(
@@ -35,42 +37,202 @@ const DUMMY_CATEGORIES = const [
   ),
   Category(
     id: "c6",
-    name: "Porshe",
-    color: Colors.teal,
-  ),
-  Category(
-    id: "c7",
     name: "Lamborghini",
     color: Colors.orange,
   ),
   Category(
     id: "c8",
-    name: "Japan",
-    color: Colors.indigo,
-  ),
-  Category(
-    id: "c9",
     name: "RWD",
     color: Colors.purple,
   ),
   Category(
-    id: "c10",
+    id: "c9",
     name: "AWD",
     color: Colors.pink,
   ),
   Category(
-    id: "c11",
+    id: "c10",
     name: "Cabrio",
     color: Colors.cyan,
   ),
   Category(
-    id: "c12",
+    id: "c11",
     name: "Sport",
     color: Colors.amber,
   ),
   Category(
-    id: "c13",
+    id: "c12",
     name: "SUV",
     color: Colors.lime,
+  ),
+];
+
+const DUMMY_CARS = const [
+  Car(
+    id: "a0",
+    categoryIds: ["c0", "c2", "c8"],
+    modelName: "BMW 3",
+    modelCode: "E90",
+    imageUrl: "https://carsopedia.com/files/generations/BMW-E90-713.jpg",
+    parameters: [
+      "lendth: 4520mm",
+      "width: 1817mm",
+      "height: 1421mm",
+      "acceleration 0-100: 8,2s",
+      "V-max: 228 km/h",
+      "combustion: 6,1 l /100km",
+    ],
+    horsePower: 170,
+    nm: 210,
+    transmission: Transmission.Manual,
+    drive: Drive.RWD,
+    fuel: Fuel.Petrol,
+  ),
+  Car(
+    id: "a1",
+    categoryIds: ["c0", "c2", "c8", "c11"],
+    modelName: "BMW M3",
+    modelCode: "E90",
+    imageUrl:
+        "https://wypozyczalniamarzen.files.wordpress.com/2017/01/bmw-m3.jpg",
+    parameters: [
+      "lendth: 4615mm",
+      "width: 1804mm",
+      "height: 1424mm",
+      "acceleration 0-100: 4,9s",
+      "V-max: 250 km/h",
+      "combustion: 12,4 l /100km",
+    ],
+    horsePower: 420,
+    nm: 400,
+    transmission: Transmission.Automatic,
+    drive: Drive.RWD,
+    fuel: Fuel.Petrol,
+  ),
+  Car(
+    id: "a2",
+    categoryIds: ["c0", "c2", "c9", "c11"],
+    modelName: "BMW M5",
+    modelCode: "G30",
+    imageUrl:
+        "https://premiummoto.pl/wp-content/uploads/2019/10/bmw-m5-competition-2020-test-opinia-1-e1570569496395.jpg",
+    parameters: [
+      "lendth: 4972mm",
+      "width: 1868mm",
+      "height: 1467mm",
+      "acceleration 0-100: 3,4s",
+      "V-max: 305 km/h",
+      "combustion: 11,3 l /100km",
+    ],
+    horsePower: 600,
+    nm: 700,
+    transmission: Transmission.Automatic,
+    drive: Drive.AWD,
+    fuel: Fuel.Petrol,
+  ),
+  Car(
+    id: "a3",
+    categoryIds: ["c0", "c2", "c9", "c12"],
+    modelName: "BMW X5",
+    modelCode: "G05",
+    imageUrl:
+        "https://www.autocentrum.pl/ac-file/car-version/5cda9b1bc74b350d281952d8/bmw-x5-g05-06.jpg",
+    parameters: [
+      "lendth: 4922mm",
+      "width: 2004mm",
+      "height: 1745mm",
+      "acceleration 0-100: 6,1s",
+      "V-max: 235 km/h",
+      "combustion: 6,2 l /100km",
+    ],
+    horsePower: 286,
+    nm: 650,
+    transmission: Transmission.Automatic,
+    drive: Drive.AWD,
+    fuel: Fuel.Diesel,
+  ),
+  Car(
+    id: "a4",
+    categoryIds: ["c0", "c3", "c11"],
+    modelName: "Audi A5",
+    modelCode: "F5",
+    imageUrl:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/2018_Audi_S5_TFSi_Quattro_Automatic_3.0_Front.jpg/480px-2018_Audi_S5_TFSi_Quattro_Automatic_3.0_Front.jpg",
+    parameters: [
+      "lendth: 4783mm",
+      "width: 1866mm",
+      "height: 1387mm",
+      "acceleration 0-100: 7,2s",
+      "V-max: 210 km/h",
+      "combustion: 6,0 l /100km",
+    ],
+    horsePower: 204,
+    nm: 320,
+    transmission: Transmission.Automatic,
+    drive: Drive.FWD,
+    fuel: Fuel.Petrol,
+  ),
+  Car(
+    id: "a5",
+    categoryIds: ["c0", "c3", "c9"],
+    modelName: "Audi A8",
+    modelCode: "D5",
+    imageUrl:
+        "https://www.autocentrum.pl/ac-file/car-version/5a12da2757502a422d2e293d/audi-a8-d5-sedan-4-0-60-tdi-435km-320kw-od-2020.jpg",
+    parameters: [
+      "lendth: 5172mm",
+      "width: 1945mm",
+      "height: 1473mm",
+      "acceleration 0-100: 4,4s",
+      "V-max: 250 km/h",
+      "combustion: 8,7 l /100km",
+    ],
+    horsePower: 435,
+    nm: 900,
+    transmission: Transmission.Automatic,
+    drive: Drive.AWD,
+    fuel: Fuel.Diesel,
+  ),
+  Car(
+    id: "a6",
+    categoryIds: ["c0", "c4", "c10", "c11"],
+    modelName: "Mercedes C-class",
+    modelCode: "c200",
+    imageUrl:
+        "https://cdn.carbuzz.com/gallery-images/1600/516000/200/516240.jpg",
+    parameters: [
+      "lendth: 4686mm",
+      "width: 1810mm",
+      "height: 1409mm",
+      "acceleration 0-100: 8,5s",
+      "V-max: 235 km/h",
+      "combustion: 5,7 l /100km",
+    ],
+    horsePower: 184,
+    nm: 250,
+    transmission: Transmission.Automatic,
+    drive: Drive.FWD,
+    fuel: Fuel.Petrol,
+  ),
+  Car(
+    id: "a7",
+    categoryIds: ["c0", "c4", "c9", "c11", "c12"],
+    modelName: "Mercedes GLC AMG",
+    modelCode: "63 S",
+    imageUrl:
+        "https://www.autocentrum.pl/ac-file/car-version/5cd94bd657502a42594605db/mercedes-glc-suv-amg-4-0-amg-63-s-510km-375kw-2017-2019.jpg",
+    parameters: [
+      "lendth: 4656mm",
+      "width: 1890mm",
+      "height: 2096mm",
+      "acceleration 0-100: 3,7s",
+      "V-max: 250 km/h",
+      "combustion: 18,2 l /100km",
+    ],
+    horsePower: 510,
+    nm: 700,
+    transmission: Transmission.Automatic,
+    drive: Drive.AWD,
+    fuel: Fuel.Petrol,
   ),
 ];
