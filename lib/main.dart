@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'screens/categories_screen.dart';
 import 'screens/category_cars_screen.dart';
+import 'screens/car_details_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,16 +16,23 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.deepOrange,
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
-                headline6: TextStyle(
+            headline6: TextStyle(
               fontSize: 20,
               fontFamily: 'RobotoCondensed',
               fontWeight: FontWeight.bold,
               color: Colors.white70,
+            ),
+            headline5: TextStyle(
+              fontSize: 20,
+              fontFamily: 'RobotoCondensed',
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
             )),
       ),
       home: CategoriesScreen(),
       routes: {
         CategoryCarsScreen.routeName: (context) => CategoryCarsScreen(),
+        CarDetailsScreen.routeName: (context) => CarDetailsScreen(),
       },
     );
   }

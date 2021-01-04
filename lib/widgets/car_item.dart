@@ -2,17 +2,24 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../models/car.dart';
+import '../screens/car_details_screen.dart';
 
 class CarItem extends StatelessWidget {
   final Car car;
 
   CarItem(this.car);
 
-  void selectMeal() {}
+  void selectMeal(BuildContext context) {
+    Navigator.of(context).pushNamed(
+      CarDetailsScreen.routeName,
+      arguments: car,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: selectMeal,
+      onTap: () => selectMeal(context),
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
